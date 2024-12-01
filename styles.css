@@ -1,0 +1,32 @@
+:root {
+    --text-color: #f5f5f5; /* Off-white text color */
+    --background-color: #121212; /* Dark gray background */
+    --accent-color: #a0c4ff; /* Optional: Accent color for links or highlights */
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+header {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    gap: 20px; /* Adds space between the items */
+    padding: 20px; /* Optional: Adds some padding around the header */
+    width: 50%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+header img {
+    width: 50px; /* Set a width for the image */
+    height: 50px; /* Set a height for the image */
+    object-fit: cover; /* Ensures the image doesn't stretch */
+    border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+header h1 {
+    margin: 0; /* Removes any default margin */
+    font-size: 24px; /* Optional: Adjusts the font size */
+    color: var(--text-color)
+}
