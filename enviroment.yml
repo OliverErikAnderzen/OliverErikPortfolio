@@ -1,0 +1,5 @@
+name: OliverErikPortfolio
+channels:
+  - conda-forge
+dependencies:
+  - 
