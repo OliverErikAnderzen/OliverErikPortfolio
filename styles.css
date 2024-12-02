@@ -134,6 +134,12 @@ nav {
     flex-direction: column;
 }
 
+#skills p {
+    text-align: center;
+    padding: 30px;
+    padding-top: 0;
+}
+
 #skills h2 {
     padding: 20px;
     margin: 0 auto;
