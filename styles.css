@@ -1,13 +1,29 @@
 :root {
     --text-color: #c8c7ce; /* Off-white text color */
     --background-color: #121212; /* Dark gray background */
-    --accent-color: #a0c4ff; /* Optional: Accent color for links or highlights */
+    --accent-color: #0039b5; /* Optional: Accent color for links or highlights */
 }
 
 body{
     background-color: var(--background-color);
     font-family: 'Roboto',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.bar {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, var(--accent-color), #00a0b5);
+    width: 90%;
+    margin: 20px 0;
+    border-radius: 4px;
+    max-width: 650px;
+    padding-right: 5px;
+}
+
+/* header */
 
 header {
     display: flex;
@@ -15,7 +31,6 @@ header {
     justify-content: center;
     gap: 20px; /* Adds space between the items */
     padding: 20px; /* Optional: Adds some padding around the header */
-    padding-left: 32px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -35,8 +50,23 @@ header h2 {
     color: var(--text-color)
 }
 
+header .img-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .img-nav #link-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 header .highlight {
-    color: darkblue;
+    color: var(--accent-color);
     margin: 0;
     font-size: 2.25rem;
     font-weight: bold;
@@ -46,5 +76,32 @@ header .highlight {
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
-    
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.fab {
+    font-size: 30px;
+}
+
+.fa-github {
+    color: var(--accent-color);
+}
+
+.fa-linkedin {
+    color: var(--accent-color);
+    font-size: 31px;
+    padding-top: 1px;
+    padding-left: 1px;
 }
