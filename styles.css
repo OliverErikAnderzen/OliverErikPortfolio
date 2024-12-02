@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --text-color: #c8c7ce; /* Off-white text color */
     --background-color: #121212; /* Dark gray background */
@@ -10,6 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--text-color);
 }
 
 .bar {
@@ -21,6 +28,10 @@ body{
     border-radius: 4px;
     max-width: 650px;
     padding-right: 5px;
+}
+
+h2 {
+
 }
 
 /* header */
@@ -78,8 +89,6 @@ header .highlight {
     -webkit-background-clip: text;
 }
 
-/* nav */
-
 nav {
     display: flex;
     justify-content: center;
@@ -104,4 +113,115 @@ nav {
     font-size: 31px;
     padding-top: 1px;
     padding-left: 1px;
+}
+
+/* skills */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#skills {
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+#skills h2 {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.logos {
+    overflow: hidden;
+    padding-top: 5px 0;
+    padding-bottom: 0;
+    background: rgb(255, 255, 255);
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background: linear-gradient(to left,rgba(255,255,255,0), var(--background-color));
+    content: "";
+    z-index: 2;
+}
+
+.logos:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 100%;
+    background: linear-gradient(to right,rgba(255,255,255,0), var(--background-color));
+    content: "";
+    z-index: 2;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 8s slide infinite linear;
+}
+
+.logo {
+    height: 40px;
+    margin: 0 5px;
+}
+
+.python-logo {
+    size: 200%;
+    padding-left: 50px;
+    padding-right: 45px;
+    transform: scale(2.5);
+    padding-bottom: 3px;
+}
+
+.git-logo {
+    height: 50px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+.pytorch-logo {
+    transform: scale(2);
+    padding-bottom: 3px;
+    padding-left: 26px;
+    padding-right: 32px;
+}
+
+.numpy-logo {
+    transform: scale(1.6);
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 25px;
+}
+
+.pandas-logo {
+    transform: scale(1.8);
+    padding-bottom: 3px;
+    padding-left: 24px;
+    padding-right: 32px;
+}
+
+.java-logo {
+    transform: scale(1.5);
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 7px;
 }
